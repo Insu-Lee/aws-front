@@ -3,7 +3,9 @@ import './App.css';
 
 function App() {
   const currentUrl = window.location.href;
-  const isDeployed = !currentUrl.includes('localhost');
+  const isDeployed = !['localhost', '127.0.0.1'].includes(
+    window.location.hostname
+  );
 
   return (
     <>
